@@ -1,0 +1,88 @@
+@import url(https://fonts.googleapis.com/earlyaccess/droidarabicnaskh.css);
+/*font-family: 'Droid Arabic Naskh', serif;*/
+
+.body_home_page{
+    background-image: url('../images/backgrounds/first_page.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.body_avatar_page
+{
+    background-image: url('../images/backgrounds/avatar_page.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.btn {
+    background: #FF946F;
+    height: 75px;
+    width: 320px;
+    border-radius: 50px;
+    border: #FF946F;
+    text-align: Center;
+    font-size:50px;
+    color: white;
+    position: relative;
+    top: 300px; 
+    left: 100px;
+}
+#av1 {
+    width: 100px;
+    height: 100px;
+    background-image: url(../images/AVATAR/1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: transparent;
+    border: transparent;
+    margin:20px;
+ }
+
+ .avatar    {
+    width: 100px;
+    height: 100px;
+    margin-left:20px;
+    margin-right:20px;
+    margin-bottom:20px;
+ }
+ .avatars {
+  position: relative;
+    top: 250px; 
+    left: 240px;
+
+ }
+ .ordre{
+    color: #6E1F08;
+    position: relative;
+    top: 210px; 
+    left: 430px;
+    font-size:70px;
+ }
+.worlds
+{
+ height: 250px;
+
+ position: relative;
+ top: 260px; 
+ background-color: #FF946F;
+ opacity: 85%;
+ background-image: url(../images/backgrounds/bande.png);
+ margin-left: -30px;
+ width: 109%;
+
+
+}
+.world
+{
+    height: 180px;
+    width: 300PX;
+    border: none;
+    border-radius: 10px;
+   
+
+
+}
+a {
+    text-decoration: none;
+    color: white;
+
+}

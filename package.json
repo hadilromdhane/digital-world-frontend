@@ -1,0 +1,25 @@
+{
+  "name": "digital-world",
+  "version": "1.0.0",
+  "description": "./app/main",
+  "main": "./app/main",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hadilromdhane/digital-world-front.git"
+  },
+  "keywords": [
+    "electron"
+  ],
+  "author": "hadil",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hadilromdhane/digital-world-front/issues"
+  },
+  "homepage": "https://github.com/hadilromdhane/digital-world-front#readme",
+  "dependencies": {
+    "electron": "^17.1.2"
+  }
+}

@@ -1,20 +1,42 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <title>ابدأ المغامرة</title>
+  </head>
 
-<head>
-    <title>First Window</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-
-<body>
-    <div>
-
-        <p>To fixe later </p>
-        <button>
-            <a href="choose_your_world.html">profile</a>
-            Go to Avatar Window
-        </button>
-
+  <body class="body-log">
+    <div id="wrapper">
+      <form id="loginForm" class="login-form" action="" method="post">
+        <div class="content mb-3">
+          <input
+            id="username"
+            type="text"
+            class="input-username"
+            placeholder="اسمك"
+          />
+          <div class="user-icon"></div>
+        </div>
+        <br />
+        <div>
+          <input
+            id="password"
+            type="text"
+            class="input-pass"
+            placeholder="رقمك"
+          />
+          <div class="pass-icon"></div>
+        </div>
+        <br />
+        <div class="footer">
+          <input class="btn" type="submit" id="loginBtn" value="دخول" />
+        </div>
+        <br />
+      </form>
     </div>
-</body>
-
+    <script type="text/javascript" src="login.js"></script>
+  </body>
 </html>

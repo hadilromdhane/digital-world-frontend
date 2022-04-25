@@ -1,70 +1,48 @@
-const { app, BrowserWindow, ipcMain } = require("electron");
-const path = require("path");
-  
-let mainWindow=null;
-  
-// Function to create independent window or main window
-function createWindow() {
-  mainWindow = new BrowserWindow({
-    width: 800,
-    height: 600,
-    // Make sure to add webPreferences with
-    // nodeIntegration and contextIsolation
-    webPreferences: {
-      nodeIntegration: true,
-      contextIsolation: false,
-    },
-    show: false,
-  });
-  
-  // Main window loads index.html file
-    mainWindow.webContents.loadURL(`file://${__dirname}/index.html`)
+const {app, BrowserWindow} = require('electron');
 
-  
-  // To maximize the window
-  mainWindow.maximize();
-  mainWindow.show();
+function createWindow () {
+		
+  // Create the browser window.
+  mainWindow = new BrowserWindow({width: 1365, height: 731})
+
+  // and load the index.html of the app.
+  mainWindow.loadURL(`file://${__dirname}/levels.html`)
+
+  // Open the DevTools.
+  // mainWindow.webContents.openDevTools()
+
+  // Emitted when the window is closed.
+  mainWindow.on('closed', function () {
+    // Dereference the window object, usually you would store windows
+    // in an array if your app supports multi windows, this is the time
+
+    // when you should delete the corresponding element.
+    mainWindow = null
+  })
 }
-// Function to create child window of parent one
-function createChildWindow() {
-	childWindow = new BrowserWindow({
-	  width: 1000,
-	  height: 700,
-	  modal: true,
-	  show: false,
-	  parent: mainWindow, // Make sure to add parent window here
-	
-	  // Make sure to add webPreferences with below configuration
-	  webPreferences: {
-		nodeIntegration: true,
-		contextIsolation: false,
-		enableRemoteModule: true,
-	  },
-	});
-// Child window loads login.html file
-mainWindow.webContents.loadURL(`file://${__dirname}/login.html`)
+
+
+app.on('ready', createWindow);
+
+app.once('ready-to-show', () => {
+  app.show()
+})
+
+// Quit when all windows are closed.
+app.on('window-all-closed', function () {
+  // On OS X it is common for applications and their menu bar
+  // to stay active until the user quits explicitly with Cmd + Q
   
-childWindow.once("ready-to-show", () => {
-   childWindow.show();
- });
-}
- 
-ipcMain.on("openChildWindow", (event, arg) => {
- createChildWindow();
-});
- 
-app.whenReady().then(() => {
- createWindow();
- 
- app.on("activate", () => {
-   if (BrowserWindow.getAllWindows().length === 0) {
-	 createWindow();
-   }
- });
-});
- 
-app.on("window-all-closed", () => {
- if (process.platform !== "win32") {
-   app.quit();
- }
-});	
+  if (process.platform !== 'darwin') {
+    app.quit()
+  }
+})
+
+app.on('activate', function () {
+  // On OS X it's common to re-create a window in the app when the
+  // dock icon is clicked and there are no other windows open.
+  
+  if (mainWindow === null) {
+    createWindow();
+  }
+})

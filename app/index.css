@@ -139,17 +139,49 @@
 /**************************************************************************/
 .paragraph {
   position: absolute;
-  width: 1047px;
-  height: 477px;
-  left: 197px;
+  width: 900px;
+  height: 470px;
+  left: 250px;
   top: 160px;
   background: #ffffff;
   font-family: "DG 3asomy";
   font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 50px;
+  /* or 310% */
+  text-align: -webkit-center;
+  color: #480786;
+}
+
+h2 {
+  position: absolute;
+  width: 320 px;
+  height: 111px;
+  left: 480px;
+  top: 6px;
+  font-family: "DG 3asomy";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 50px;
+  line-height: 74px;
+  text-align: right;
+  color: #ffffff;
+}
+
+.footer {
+  position: absolute;
+  width: 132px;
+  height: 42px;
+  left: 83px;
+  top: 590px;
+
+  font-family: "DG 3asomy";
+  font-style: normal;
   font-weight: 400;
   font-size: 24px;
-  line-height: 74px;
-  /* or 310% */
-  text-align: right;
-  color: #480786;
+  line-height: 42px;
+  /* identical to box height */
+
+  color: #ffffff;
 }

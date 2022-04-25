@@ -6,7 +6,7 @@ function createWindow () {
   mainWindow = new BrowserWindow({width: 1365, height: 731})
 
   // and load the index.html of the app.
-  mainWindow.loadURL(`file://${__dirname}/levels.html`)
+  mainWindow.loadURL(`file://${__dirname}/level1.html`)
 
   // Open the DevTools.
   // mainWindow.webContents.openDevTools()
